@@ -1,6 +1,6 @@
 WITH
 data AS(
-    SELECT * FROM 'cloudside-academy.dbt_sample_data.annual-enterprise-survey02'),
+    SELECT * FROM 'cloudside-academy.dbt_sample_data.annual-enterprise-survey01'),
 
 a AS(
     SELECT
