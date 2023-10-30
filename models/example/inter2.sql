@@ -6,9 +6,9 @@ data AS(
         {{dbt_utils.star(from=ref('stage5'))}},
         {{dbt_utils.star(from=ref('stage6'))}}
     FROM
-        {{ref('stage5')}} as t1
+        {{ref('stage5')}} as t2
     JOIN
-        {{ref('stage6')}} as t2 
+        {{ref('stage6')}} as t1
     ON
         t1.id=t2.id   
     WHERE 
