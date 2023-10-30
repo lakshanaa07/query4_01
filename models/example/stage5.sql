@@ -1,9 +1,9 @@
 WITH
-data as(
-    select * from 'cloudside-academy.dbt_sample_data.annual-enterprise-survey02'),
+data AS(
+    SELECT * FROM 'cloudside-academy.dbt_sample_data.annual-enterprise-survey02'),
 
-a as(
-    select
+a AS(
+    SELECT
         id,
         year,
         Industry_aggregation_NZSIOC,
@@ -14,7 +14,7 @@ a as(
         Industry_code_ANZSIC06,
         serial_number,
         serial_number_1
-    from data
+    FROM data
 )
 
-select * from a
+SELECT * FROM a
