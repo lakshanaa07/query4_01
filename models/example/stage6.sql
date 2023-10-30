@@ -1,6 +1,7 @@
 WITH 
 data AS(
-    SELECT * FROM `cloudside-academy.dbt_sample_data.annual-enterprise-survey02`)
+    SELECT * FROM `cloudside-academy.dbt_sample_data.annual-enterprise-survey02`),
+    
 b AS(
     SELECT 
         id AS table1_id, 
