@@ -1,9 +1,9 @@
-with 
-data as(
-    select * from 'cloudside-academy.dbt_sample_data.annual-enterprise-survey01'),
+WITH 
+data AS(
+    SELECT * FROM 'cloudside-academy.dbt_sample_data.annual-enterprise-survey02'),
 
-b as(
-    select 
+b AS(
+    SELECT 
         id, 
         year, 
         industry_code_ANZSIC,
@@ -14,7 +14,7 @@ b as(
         unit,
         serial_number,
         serial_number_1,
-    from data
+    FROM data
 )
 
-select * from b 
+SELECT * FROM b 
