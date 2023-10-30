@@ -1,6 +1,10 @@
 WITH
 data AS(
+<<<<<<< HEAD
     SELECT * FROM `cloudside-academy.dbt_sample_data.annual-enterprise-survey02`),
+=======
+    SELECT * FROM 'cloudside-academy.dbt_sample_data.annual-enterprise-survey01'),
+>>>>>>> 7fc43ca819ffa596e482c859bd95b45370315fcf
 
 a AS(
     SELECT
