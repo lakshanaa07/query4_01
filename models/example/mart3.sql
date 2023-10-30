@@ -1,8 +1,8 @@
-with
+WITH
     {{config(materialized='table')}}
 
-data as (
-    select * from {{ref('inter2')}}
+data AS (
+    SELECT * FROM {{ref('inter2')}}
 )
 
-select * from data
+SELECT * FROM data
