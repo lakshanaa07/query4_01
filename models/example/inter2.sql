@@ -1,10 +1,10 @@
 WITH
-{{config(materialized='ephemeral')}}
+{{config(ephemeral)}}
 
 data AS(
     SELECT 
-        {{dbt_utils.star(from=ref('stage5'), except=["id"])}},
-        {{dbt_utils.star(from=ref('stage6'), except=["id"])}}
+        {{dbt_utils.star(from=ref('stage5'))}},
+        {{dbt_utils.star(from=ref('stage6'))}}
     FROM
         {{ref('stage5')}} as t2
     JOIN
