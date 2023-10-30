@@ -3,8 +3,8 @@ WITH
 
 data AS(
     SELECT 
-        {{dbt_utils.star(from=ref('stage5'))}},
-        {{dbt_utils.star(from=ref('stage6'))}}
+        {{dbt_utils.star(from=ref('stage5'), except=["id"])}},
+        {{dbt_utils.star(from=ref('stage6'), except=["id"])}}
     FROM
         {{ref('stage5')}} as t2
     JOIN
