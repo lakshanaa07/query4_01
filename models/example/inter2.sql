@@ -1,19 +1,19 @@
-with
+WITH
 {{config(materialized='ephemeral')}}
 
-data as(
-    select 
+data AS(
+    SELECT 
         {{dbt_utils.star(from=ref('stage5'))}},
         {{dbt_utils.star(from=ref('stage6'))}}
-    from
+    FROM
         {{ref('stage5')}} as t1
-    join
+    JOIN
         {{ref('stage6')}} as t2 
     ON
         t1.id=t2.id   
-    where 
+    WHERE 
         t1.year=2013
-    group by 
+    GROUP BY 
         t1.id,
     t1.year, 
     t2.Year, 
@@ -36,4 +36,4 @@ data as(
     t2.serial_number_1
 )
 
-select * from data
+SELECT * FROM data
