@@ -10,30 +10,30 @@ data AS(
     JOIN
         {{ref('stage6')}} as t1
     ON
-        t1.id=t2.id   
+        table1_id=table2_id  
     WHERE 
-        t1.year=2013
+        table1_year=2013
     GROUP BY 
-        t1.id,
-    t1.year, 
-    t2.Year, 
-    t1.industry_code_ANZSIC, 
-    t2.Industry_code_NZSIOC,
-    t1.industry_name_ANZSIC,
-    t1.rme_size_grp,
-    t1.variable,
-    t1.value,
-    t1.unit,
-    t1.serial_number,
-    t1.serial_number_1,
-    t2.id,
-    t2.Industry_aggregation_NZSIOC,
-    t2.Industry_name_NZSIOC,
-    t2.Units,
-    t2.Value,
-    t2.Industry_code_ANZSIC06,
-    t2.serial_number,
-    t2.serial_number_1
+        table1_id,
+    table1_year, 
+    table2_year, 
+    table1_industry_code, 
+    table2_industry_code,
+    table1_industry_name,
+    table1_rme_size_grp,
+    table1_variable,
+    table1_value,
+    table1_unit,
+    table1_serial_number,
+    table1_serial_number_1,
+    table2_id,
+    table2_industry_aggregation,
+    table2_industry_name,
+    table2_units,
+    table2_value,
+    table2_industry_code_ANZSIC06,
+    table2_serial_number,
+    table2_serial_number_1
 )
 
 SELECT * FROM data
